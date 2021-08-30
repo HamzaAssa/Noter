@@ -1,0 +1,206 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+  font-family: "poppins", sans-serif;
+  padding: 10px 10px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top .cancel {
+  transform: rotate(45deg);
+  width: 30px;
+  height: auto;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+
+.top img {
+  width: 2.5em;
+  height: auto;
+  cursor: pointer;
+}
+
+.top input {
+  background: url(../images/search.svg);
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  border: 1px solid gray;
+  outline: none;
+  width: 170px;
+  height: 23px;
+  padding: 0 28px 0 25px;
+}
+
+.top input:focus {
+  border: 2px solid #1e6fa5;
+}
+
+.note {
+  background-color: #c9eaef;
+  border: 1px solid #707070;
+  border-radius: 15px;
+  margin: 1em 0;
+  height: auto;
+  overflow: hidden;
+  padding: 0.7em;
+  color: black;
+}
+
+.note .title::first-letter {
+  text-transform: uppercase;
+}
+
+.note .text::first-letter {
+  text-transform: uppercase;
+}
+
+.note .hide {
+  display: none;
+}
+
+.note .show {
+  display: inline-block;
+}
+
+.note img {
+  cursor: pointer;
+  margin-top: -0.5em;
+}
+
+.note .open {
+  float: right;
+}
+
+.note .date {
+  color: #5e5a5a;
+  font-size: 13px;
+  margin: -0.5em 0.5em 0 0;
+  float: right;
+}
+
+.firstHide {
+  display: none;
+}
+
+.createArea {
+  width: 100%;
+  height: 100%;
+  background-color: #c9eaef;
+  border: 1px solid gray;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.createArea .colors {
+  width: 100%;
+  text-align: center;
+  padding: 0 5px;
+}
+
+.createArea .colors .color {
+  display: inline-block;
+  width: 14%;
+  height: 60px;
+  margin: 0 3px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  cursor: pointer;
+}
+
+.createArea .colors .color:hover {
+  box-shadow: 2px 5px 20px #828383;
+}
+
+.createArea .colors .selected {
+  box-shadow: 2px 5px 20px #828383;
+}
+
+.createArea .colors .blue {
+  background-color: #c9eaef;
+}
+
+.createArea .colors .green {
+  background-color: #7af39e;
+}
+
+.createArea .colors .yellow {
+  background-color: #f9e298;
+}
+
+.createArea .colors .red {
+  background-color: #f9b4b4;
+}
+
+.createArea .colors .purple {
+  background-color: #a49cf1;
+}
+
+.createArea .colors .pink {
+  background-color: #f599ef;
+}
+
+.createArea textarea {
+  border: none;
+  overflow: auto;
+  outline: none;
+  box-shadow: none;
+  resize: none;
+  /*remove the resize handle on the bottom right*/
+  padding: 15px 0 15px 15px;
+  overflow: hidden;
+  background-color: #c9eaef;
+}
+
+.createArea .create-title {
+  height: 2em;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.createArea .create-text {
+  font-size: 1.3em;
+  height: 65vh;
+}
+
+.createArea .bottom-dev {
+  height: 10vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 14px 7px;
+}
+
+.createArea button {
+  width: 60px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.5s ease-out;
+}
+
+.createArea button:hover {
+  opacity: 1;
+}
+
+.createArea .cancel-btn {
+  background-color: #5c5c5c;
+}
+
+.createArea .save-btn {
+  background-color: #11a81b;
+}
