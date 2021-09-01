@@ -57,14 +57,6 @@ body {
   color: black;
 }
 
-.note .title::first-letter {
-  text-transform: uppercase;
-}
-
-.note .text::first-letter {
-  text-transform: uppercase;
-}
-
 .note .hide {
   display: none;
 }

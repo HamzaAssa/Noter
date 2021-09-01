@@ -51,12 +51,7 @@ body {
   overflow: hidden;
   padding: 0.7em;
   color: black;
-  .title::first-letter {
-    text-transform: uppercase;
-  }
-  .text::first-letter {
-    text-transform: uppercase;
-  }
+  display: block;
   // transition: height 2s ease-in;
   .hide {
     display: none;
