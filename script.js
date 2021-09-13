@@ -13,6 +13,9 @@ function getLocalNotes() {
   const notes = document.querySelector(".notes");
   notes.innerHTML = localStorage.getItem("notes");
 
+  if (notes.innerHTML == "") {
+    document.querySelector(".nothing").style.display = "unset";
+  }
   const expand = document.querySelectorAll(".open");
   const expandLess = document.querySelectorAll(".close");
   const deletebutton = document.querySelectorAll(".delete");
@@ -37,6 +40,8 @@ function saveLocalNotes(note) {
 //FUNCTIONS
 //startnewNote Note
 function startNewNote() {
+  document.querySelector(".nothing").style.display = "none";
+
   createArea.innerHTML = "";
   noterHome.style.display = "none";
   createArea.classList.add("createArea");
@@ -121,6 +126,7 @@ function selectBg() {
 function cancelNote() {
   createArea.classList.remove("createArea");
   noterHome.style.display = "unset";
+  getLocalNotes();
 }
 
 //Save Notes
@@ -210,6 +216,7 @@ function startSearch() {
     searchInput.remove();
     search.style.display = "unset";
     cancelSearch.remove();
+    getLocalNotes();
   };
 }
 
@@ -245,6 +252,7 @@ function deleteNote() {
   this.parentElement.remove();
   const notes = document.querySelector(".notes");
   localStorage.setItem("notes", notes.innerHTML);
+  getLocalNotes();
 }
 //Edit Note
 function editNote() {

@@ -55,6 +55,7 @@ body {
   overflow: hidden;
   padding: 0.7em;
   color: black;
+  display: block;
 }
 
 .note .hide {
@@ -195,4 +196,24 @@ body {
 
 .createArea .save-btn {
   background-color: #11a81b;
+}
+
+.nothing {
+  display: none;
+  opacity: 0.6;
+  color: gray;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15.2em;
+}
+
+@media screen and (max-width: 400px) {
+  .nothing {
+    font-size: 1em;
+    width: 15.2em;
+  }
 }
